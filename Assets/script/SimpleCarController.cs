@@ -67,6 +67,11 @@ public class SimpleCarController : MonoBehaviour
             carParkingStop.Invoke();
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("you hit " + collision.gameObject.name);
+    }
     public void PlayerEnterCar(GameObject player, Camera playerCam)
     {
         Debug.Log("player in car");
